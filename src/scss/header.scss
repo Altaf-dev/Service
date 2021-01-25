@@ -2,7 +2,7 @@
 
 .header {
   position: relative;
-  height: 100vh;
+  //height: 900px;
   padding-top: 20px;
 
   &__bg {
@@ -254,10 +254,10 @@
   &__headline {
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
+    padding: 11vh 0;
 
     @media screen and (max-width: 1199px) {
-      margin-top: 200px;
+
     }
 
     @media screen and (max-width: 767px) {
@@ -265,7 +265,7 @@
     }
 
     @media screen and (max-width: 425px) {
-      margin-top: 150px;
+      padding: 15vh 0;
     }
   }
 
@@ -292,7 +292,7 @@
     display: block;
     width: 350px;
     height: 80px;
-    margin-top: 130px;
+    margin-top: 10vh;
     margin-left: auto;
     border-radius: 20px;
     background: linear-gradient(90deg, #0047FF 0%, #29D8FF 100%);
@@ -318,7 +318,7 @@
     }
 
     @media screen and (max-width: 425px) {
-      margin-top: 100px;
+      margin-top: 10vh;
     }
   }
 }
