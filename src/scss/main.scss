@@ -181,7 +181,6 @@
           }
         }
         @media screen and (max-width: 425px) {
-          left: -10px;
           width: 30px;
           height: 30px;
         }
@@ -194,12 +193,18 @@
           left: 35%;
           transform: rotate(-45deg);
         }
+        @media screen and (max-width: 425px) {
+          left: -10px;
+        }
       }
       &-next{
         right: -30px;
         &:before {
           right: 35%;
           transform: rotate(135deg);
+        }
+        @media screen and (max-width: 425px) {
+          right: -10px;
         }
       }
 
