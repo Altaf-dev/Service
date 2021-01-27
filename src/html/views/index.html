@@ -10,7 +10,7 @@ description: "SmartService"
   <input id="page-name" type="text" value="main-page" hidden>
   <div class="container">
     <section class="advantage">
-      <h4 class="advantage__title">Мы делаем, то что не делают другие!</h4>
+      <h2 class="advantage__title">Мы делаем, то что не делают другие!</h2>
       <div class="advantage__wrapper">
         <div class="advantage__items">
           <div class="advantage__items-block">
@@ -60,7 +60,6 @@ description: "SmartService"
             </svg>
             <p class="advantage__items-text">Какоето описание</p>
           </div>
-
           <div class="advantage__btn-block">
             <button class="advantage__button">Скачать прайс услуг</button>
           </div>
@@ -68,10 +67,8 @@ description: "SmartService"
       </div>
       <p class="advantage__subtitle">Ломайте Вашу технику с удовольствием</p>
     </section>
-  </div>
-  <div class="container">
     <section class="slider">
-      <h4 class="slider__title">Спектр услуг нашего сервиса</h4>
+      <h2 class="slider__title">Спектр услуг нашего сервиса</h2>
       <div class="slider__block">
         <div class="slider__item">
           <div class="slider__item-wrap">
@@ -101,6 +98,26 @@ description: "SmartService"
             <button class="slider__btn">Узнать стоимость</button>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="promo">
+      <h3 class="promo__title">Какой то текст описывающий форму отправки</h3>
+      <p class="promo__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+      <div class="promo__form-wrap">
+        <h2 class="promo__form-title">Отправить заявку</h2>
+        <form action="/php/send.php" method="post" accept-charset="utf-8" id="form-main" enctype="multipart/form-data"  class="promo__form-main">
+          <input class="promo__form-input input-item" name="name" type="text" required placeholder="Имя" autofocus>
+          <input class="promo__form-input input-item phone-mask" name="phone" type="tel" required placeholder="Телефон" autofocus>
+          <input class="promo__form-input input-item" name="email" type="email" placeholder="Электронная почта" autofocus>
+          <div class="promo__form-btn  input-item">
+            <label for="input__file" class="input__file-button">
+              <span>Прикрепить файл</span>
+              <input id="input__file" name="myfile[]" type="file" class="promo__input-file" size="40" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx" aria-invalid="false">
+            </label>
+          </div>
+          <textarea placeholder=" " class="promo__form-text input-item" cols="30" rows="12"></textarea>
+          <button type="submit" class="promo__form-submit input-item">Отправить</button>
+        </form>
       </div>
     </section>
   </div>
