@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('.slider__block').slick({
         slidesToShow: 3,
         centerMode: true,
-        autoplay:false,
+        autoplay:true,
         variableWidth: true,
         arrow: true,
         dots: true,
