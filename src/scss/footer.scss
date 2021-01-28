@@ -1,2 +1,85 @@
 @import "color.scss";
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-bg;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+
+  }
+
+  &__nav-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .location {
+        color: $btn-focus;
+        fill: $btn-focus;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+    transition: .3s;
+  }
+
+  &__item-text {
+    font-size: 1.8rem;
+    color: $body-text;
+    transition: .3s;
+    @media screen and (max-width: 425px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__contacts-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: $body-text;
+    transition: .3s;
+    &:hover {
+      color: $btn-focus;
+      .icon_color {
+        transition: .3s;
+        fill: $btn-focus;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 1.2rem;
+    }
+  }
+}
