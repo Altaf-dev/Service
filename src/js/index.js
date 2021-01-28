@@ -24,9 +24,12 @@ $(document).ready(function () {
 })
 
 $('.promo__slider-wrap').slick({
-    // slidesToShow: 3,
-    centerMode: false,
+    slidesToShow: 3,
+    infinite: true,
+    centerMode: true,
     autoplay:true,
     variableWidth: true,
     arrow: false,
+    touchMove: true,
+    swipeToSlide: true
 });
