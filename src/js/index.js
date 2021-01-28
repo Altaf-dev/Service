@@ -22,3 +22,11 @@ $(document).ready(function () {
         ]
     });
 })
+
+$('.promo__slider-wrap').slick({
+    // slidesToShow: 3,
+    centerMode: false,
+    autoplay:true,
+    variableWidth: true,
+    arrow: false,
+});
