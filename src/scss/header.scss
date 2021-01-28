@@ -262,6 +262,10 @@
     font-weight: 700;
     font-size: 9.6rem;
 
+    @media screen and (max-width: 767px) {
+      font-size: 7.2rem;
+    }
+
     @media screen and (max-width: 425px) {
       font-size: 5rem;
     }
