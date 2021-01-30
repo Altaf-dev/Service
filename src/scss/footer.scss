@@ -5,9 +5,6 @@
   flex-direction: column;
   background-color: $footer-bg;
   width: 100%;
-  @media screen and (max-width: 767px) {
-
-  }
 
   &__nav-top {
     display: flex;
