@@ -74,6 +74,7 @@
       }
 
     }
+
     @media screen and (max-width: 1199px) {
       position: relative;
     }
@@ -127,11 +128,13 @@
 
   .active {
     height: 160px;
+
     .header__btn {
       &:before {
         transform: translate(-50%) rotate(135deg);
       }
     }
+
     @media screen and (max-width: 767px) {
       height: 70px;
     }
@@ -151,6 +154,7 @@
           fill: $border-color;
           transition: .3s;
         }
+
         .header__items {
           color: $border-color;
           transition: all .3s;
@@ -162,7 +166,7 @@
       height: 100%;
       width: 100%;
       margin: 0;
-      border-right: 1px solid rgba(0,55,118,.3);
+      border-right: 1px solid rgba(0, 55, 118, .3);
     }
   }
 
@@ -185,14 +189,17 @@
       display: none;
     }
   }
+
   &__btn {
     display: none;
+
     &:hover {
       &:before {
         border-bottom: 3px solid $btn-focus;
         border-left: 3px solid $btn-focus;
       }
     }
+
     @media screen and (max-width: 1199px) {
       display: block;
       width: 30px;
@@ -211,7 +218,7 @@
         position: absolute;
         top: 42%;
         left: 50%;
-        transform: translate(-50%,-50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
         transition: all .3s;
       }
     }
@@ -222,9 +229,11 @@
 
   &__icon {
     transition: .3s;
+
     &:hover {
       transform: scale(1.2);
     }
+
     @media screen and (max-width: 1199px) {
       width: 30px;
       height: 30px;

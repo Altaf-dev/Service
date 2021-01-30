@@ -29,6 +29,7 @@
         fill: $btn-focus;
       }
     }
+
     @media screen and (max-width: 767px) {
       margin-bottom: 20px;
     }
@@ -67,13 +68,16 @@
     font-size: 1.8rem;
     color: $body-text;
     transition: .3s;
+
     &:hover {
       color: $btn-focus;
+
       .icon_color {
         transition: .3s;
         fill: $btn-focus;
       }
     }
+
     @media screen and (max-width: 767px) {
       margin-bottom: 20px;
       margin-right: 20px;
