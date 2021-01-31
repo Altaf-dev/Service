@@ -1,14 +1,119 @@
 @import "color.scss";
 
 
+.main {
+  min-height: 10vh;
+  height: calc(100vh - 220px);
+  margin-bottom: 50px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+    filter: brightness(50%);
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    padding: 15vh 0;
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding: 15vh 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 9.6rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 7.2rem;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 5rem;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 3.6rem;
+
+    @media screen and (max-width: 425px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__button {
+    width: 350px;
+    height: 80px;
+    margin-top: 10vh;
+    margin-left: auto;
+    border-radius: 20px;
+    background: $header-btn;
+    color: $body-text;
+    font-size: 2.4rem;
+    outline: none;
+    transition: background .3s ease-in-out;
+
+    &:hover {
+      background: $header-btn-hover;
+    }
+
+    &:focus {
+      background: $btn-focus;
+    }
+
+    @media screen and (max-width: 1199px) {
+      width: 290px;
+      height: 60px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 425px) {
+      margin-top: 10vh;
+    }
+  }
+
+}
+
+
 .advantage {
   border-bottom: 2px solid $border-color;
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+  }
 
   &__title {
     font-size: 3.6rem;
     padding-top: 40px;
     @media screen and (max-width: 767px) {
       text-align: center;
+      padding-top: 0;
     }
 
   }
