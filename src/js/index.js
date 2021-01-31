@@ -3,6 +3,18 @@ document.querySelector('.header__btn').onclick = function () {
     document.querySelector('.menu').classList.toggle('menu-close');
 };
 
+document.querySelector('.main__button').onclick = function () {
+    document.querySelector('.modal').classList.toggle('modal-active');
+};
+
+document.querySelector('.advantage__button').onclick = function () {
+    document.querySelector('.modal').classList.toggle('modal-active');
+};
+
+document.querySelector('.modal__close-btn').onclick = function () {
+    document.querySelector('.modal').classList.remove('modal-active');
+};
+
 $(document).ready((function () {
     $(".phone-mask").mask("+7 (999) 999-99-99")
 }));

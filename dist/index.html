@@ -433,7 +433,7 @@
                     aria-invalid="false"
                 /></label>
               </div>
-              <textarea placeholder=" " class="promo__form-text input-item" cols="30" rows="12"></textarea>
+              <textarea name="mess" class="promo__form-text input-item" cols="30" rows="12"></textarea>
               <button type="submit" class="promo__form-submit input-item">Отправить</button>
             </form>
           </div>
@@ -580,6 +580,26 @@
             </svg>
             <span>Instagram</span></a
           >
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__bg"></div>
+        <div class="modal__wrap">
+          <span class="modal__close-btn"></span>
+          <h2 class="modal__title">Отправить заявку</h2>
+          <form
+            action="/php/send.php"
+            method="post"
+            accept-charset="utf-8"
+            id="form-modal"
+            enctype="multipart/form-data"
+            class="modal__form"
+          >
+            <input class="modal__item" name="name" required placeholder="Имя" />
+            <input class="modal__item phone-mask" name="phone" type="tel" required placeholder="Телефон" />
+            <input class="modal__item" name="email" type="email" required placeholder="Электронная почта" />
+            <button type="submit" class="modal__submit modal__item">Отправить</button>
+          </form>
         </div>
       </div>
     </footer>
