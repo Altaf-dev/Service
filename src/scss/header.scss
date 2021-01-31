@@ -29,13 +29,13 @@
       content: '';
       position: absolute;
       display: block;
-      width: 102%;
-      height: 102%;
+      width: 101%;
+      height: 101%;
       border-radius: 50%;
       z-index: -10;
       background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
       animation: animate 5s linear infinite;
-      filter: blur(3px);
+      filter: blur(5px);
 
       @keyframes animate {
         0% {
