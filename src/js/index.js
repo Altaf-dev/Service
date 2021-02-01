@@ -28,6 +28,7 @@ $(document).ready(function () {
         variableWidth: true,
         arrow: true,
         dots: true,
+        pauseOnFocus: true,
         responsive: [
             {
                 breakpoint: 1000,
@@ -48,5 +49,6 @@ $('.promo__slider-wrap').slick({
     variableWidth: true,
     arrow: false,
     touchMove: true,
-    swipeToSlide: true
+    swipeToSlide: true,
+    swipe:true
 });

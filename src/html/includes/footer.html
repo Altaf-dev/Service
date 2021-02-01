@@ -74,16 +74,18 @@
         <div class="modal__wrap">
             <span class="modal__close-btn"></span>
             <h2 class="modal__title">Отправить заявку</h2>
-            <form action="/php/send.php" method="post" accept-charset="utf-8" id="form-modal" enctype="multipart/form-data" class="modal__form">
+            <form action="php/send.php" method="post" accept-charset="utf-8"
+                  enctype="multipart/form-data" class="modal__form">
+                <input type="hidden" name="type" value="price">
                 <input type="text" class="modal__item" name="name" type="text" required placeholder="Имя">
-                <input type="text" class="modal__item phone-mask" name="phone" type="tel" required placeholder="Телефон">
-                <input type="text" class="modal__item" name="email" type="email" required placeholder="Электронная почта">
+                <input type="text" class="modal__item phone-mask" name="phone" type="tel" required
+                       placeholder="Телефон">
+                <input type="text" class="modal__item" name="email" type="email" required
+                       placeholder="Электронная почта">
                 <button type="submit" class="modal__submit modal__item">Отправить</button>
             </form>
         </div>
     </div>
-
-
 </footer>
 
 

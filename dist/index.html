@@ -398,7 +398,7 @@
           <div class="promo__form-wrap">
             <h2 class="promo__form-title">Отправить заявку</h2>
             <form
-              action="/php/send.php"
+              action="php/send.php"
               method="post"
               accept-charset="utf-8"
               id="form-main"
@@ -588,13 +588,13 @@
           <span class="modal__close-btn"></span>
           <h2 class="modal__title">Отправить заявку</h2>
           <form
-            action="/php/send.php"
+            action="php/send.php"
             method="post"
             accept-charset="utf-8"
-            id="form-modal"
             enctype="multipart/form-data"
             class="modal__form"
           >
+            <input type="hidden" name="type" value="price" />
             <input class="modal__item" name="name" required placeholder="Имя" />
             <input class="modal__item phone-mask" name="phone" type="tel" required placeholder="Телефон" />
             <input class="modal__item" name="email" type="email" required placeholder="Электронная почта" />
