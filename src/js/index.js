@@ -23,7 +23,7 @@ $(document).ready(function () {
     $("#input__file").change(function () {
         let filename = $(this).val().replace(/.*\\/, "");
         $("#file-name").html(filename);
-        $('#file-name').css('paddingLeft', '10px')
+        $('#file-name').css('paddingTop', '10px')
     });
 });
 
