@@ -22,8 +22,7 @@ $(document).ready((function () {
 $(document).ready(function () {
     $("#input__file").change(function () {
         let filename = $(this).val().replace(/.*\\/, "");
-        $("#file-name").html(filename);
-        $('#file-name').css('paddingTop', '10px')
+        $("#file-name").html('(Файл прикреплен)');
     });
 });
 
