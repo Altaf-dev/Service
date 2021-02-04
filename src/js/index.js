@@ -19,6 +19,13 @@ $(document).ready((function () {
     $(".phone-mask").mask("+7 (999) 999-99-99")
 }));
 
+$(document).ready(function () {
+    $("#input__file").change(function () {
+        let filename = $(this).val().replace(/.*\\/, "");
+        $("#file-name").html(filename);
+        $('#file-name').css('paddingLeft', '10px')
+    });
+});
 
 $(document).ready(function () {
     $('.slider__block').slick({
