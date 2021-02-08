@@ -8,11 +8,11 @@ description: "SmartService"
 
 <main class="main-page">
     <input id="page-name" type="text" value="main-page" hidden>
+    <div class="bg">
+        <video class="bg__video" src="img/bg-video2_trim.mp4" autoplay loop muted poster="img/bg-image2.png"></video>
+    </div>
     <section class="main">
-        <div class="main__bg">
-            <video class="main__video" src="img/bg-video2_trim.mp4" autoplay loop muted
-                   poster="img/bg-image2.png"></video>
-        </div>
+
         <div class="container">
             <div class="main__headline">
                 <h1 class="main__title">SmartService</h1>
@@ -138,6 +138,30 @@ description: "SmartService"
                 </div>
             </div>
         </section>
+        <div class="modal-slide">
+            <div class="modal-slide__form-wrap">
+                <span class="modal-slide__close-btn"></span>
+                <h2 class="modal-slide__form-title">Отправить заявку</h2>
+                <form action="php/send.php" method="post" accept-charset="utf-8"
+                      enctype="multipart/form-data" class="promo__form-main">
+                    <input class="modal-slide__form-input input-item" name="name" type="text" required placeholder="Имя">
+                    <input class="modal-slide__form-input input-item phone-mask" name="phone" type="tel" required
+                           placeholder="Телефон">
+                    <input class="modal-slide__form-input input-item" name="email" type="email" required
+                           placeholder="Электронная почта">
+                    <div class="modal-slide__form-btn ">
+                        <label for="input__file" class="input__file-button">
+                            <span>Прикрепить файл</span>
+                            <span id="file-name-modal" class="modal-slide__file-name"></span>
+                            <input id="input__file-modal"  name="myfile[]" type="file" class="promo__input-file" size="40"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx" aria-invalid="false" multiple>
+                        </label>
+                    </div>
+                    <textarea name="mess" class="modal-slide__form-text input-item" cols="30" rows="12" placeholder="Добавьте описание"></textarea>
+                    <button type="submit" class="modal-slide__form-submit input-item">Отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
     <section class="promo">
         <div class="container">
@@ -162,7 +186,7 @@ description: "SmartService"
                                    accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx" aria-invalid="false" multiple>
                         </label>
                     </div>
-                    <textarea name="mess" class="promo__form-text input-item" cols="30" rows="12"></textarea>
+                    <textarea name="mess" class="promo__form-text input-item" cols="30" rows="12" placeholder="Добавьте описание"></textarea>
                     <button type="submit" class="promo__form-submit input-item">Отправить</button>
                 </form>
             </div>

@@ -15,6 +15,14 @@ document.querySelector('.modal__close-btn').onclick = function () {
     document.querySelector('.modal').classList.remove('modal-active');
 };
 
+document.querySelector('.slider__btn').onclick = function () {
+    document.querySelector('.modal-slide').classList.toggle('active');
+};
+
+document.querySelector('.modal-slide__close-btn').onclick = function () {
+    document.querySelector('.modal-slide').classList.remove('active');
+};
+
 $(document).ready((function () {
     $(".phone-mask").mask("+7 (999) 999-99-99")
 }));
