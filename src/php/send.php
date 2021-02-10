@@ -1,8 +1,8 @@
 <?php
 // Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require '../phpmailer/PHPMailer.php';
+require '../phpmailer/SMTP.php';
+require '../phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
@@ -43,14 +43,15 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'coupe.86@mail.ru'; // Логин на почте
-    $mail->Password   = '@karim16122009'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('coupe.86@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+        $mail->Username   = 'smt.service@bk.ru'; // Логин на почте
+        $mail->Password   = 'hasik92.92'; // Пароль на почте
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
+        $mail->setFrom('coupe.86@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
-    // Получатель письма
-    $mail->addAddress('coupe.86@mail.ru');
+        // Получатель письма
+        $mail->addAddress('smt.service@bk.ru');
+        $mail->addAddress('coupe.86@mail.ru');
 
     // Прикрипление файлов к письму
 if (!empty($_FILES['myfile']['name'][0])) {

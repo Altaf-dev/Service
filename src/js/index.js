@@ -1,27 +1,61 @@
-document.querySelector('.header__btn').onclick = function () {
-    document.querySelector('.header__nav').classList.toggle('active');
-    document.querySelector('.menu').classList.toggle('menu-close');
-};
+const MODAL_SLIDE = document.querySelector(".slider__btn")
+const FORM = document.querySelector(".promo__form")
+const MENU_BTN = document.querySelector(".header__btn")
+const MENU = document.querySelector(".header__nav")
 
-document.querySelector('.main__button').onclick = function () {
-    document.querySelector('.modal').classList.toggle('modal-active');
-};
+function openMenu() {
+    MENU.classList.toggle('menu-active')
+}
+function closeMenu() {
+    MENU.classList.remove('menu-active')
+}
 
-document.querySelector('.advantage__button').onclick = function () {
-    document.querySelector('.modal').classList.toggle('modal-active');
-};
+function openForm() {
+    FORM.classList.toggle('active')
+}
 
-document.querySelector('.close-btn').onclick = function () {
-    document.querySelector('.modal').classList.remove('modal-active');
-};
+function closeForm() {
+    FORM.classList.remove('active')
+}
 
-document.querySelector('.slider__btn').onclick = function () {
-    document.querySelector('.promo__form').classList.toggle('active');
-};
+function openModal() {
+    $('.modal').fadeIn()
+}
 
-document.querySelector('.close-btn').onclick = function () {
-    document.querySelector('.promo__form').classList.remove('active');
-};
+function closeModal() {
+    $('.modal').fadeOut()
+}
+
+MENU_BTN.onclick = function () {
+    openMenu()
+}
+
+MODAL_SLIDE.onclick = function () {
+    openForm()
+}
+
+MODAL_SLIDE.onclick = function () {
+    openForm()
+}
+
+window.addEventListener('click', (event) => {
+    let element = event.target
+
+    if (element.classList.contains('open-modal')) {
+        openModal()
+    }
+})
+
+window.addEventListener('click', (event) => {
+    let element = event.target
+    if (element.classList.contains('close-btn') ||
+        element.classList.contains('modal')     ||
+        element.classList.contains('promo__form')) {
+        closeMenu()
+        closeModal()
+        closeForm()
+    }
+})
 
 $(document).ready((function () {
     $(".phone-mask").mask("+7 (999) 999-99-99")
@@ -65,5 +99,5 @@ $('.promo__slider-wrap').slick({
     arrow: false,
     touchMove: true,
     swipeToSlide: true,
-    swipe:true
+    swipe: true
 });
