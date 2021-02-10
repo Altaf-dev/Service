@@ -1,8 +1,8 @@
 <?php
 // Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require '../phpmailer/PHPMailer.php';
+require '../phpmailer/SMTP.php';
+require '../phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
@@ -35,6 +35,7 @@ $body = "
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
+    $msg = "ok";
     $mail->isSMTP();
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
@@ -79,7 +80,7 @@ else {$result = "error";}
 }
 
 // Отображение результата
-if(!$mail->send()) {
+if (!$mail->send()) {
     header('location: ../404.html');
 } else {
     header('location: ../thanks.html');

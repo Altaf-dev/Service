@@ -380,57 +380,6 @@
             </div>
           </div>
         </section>
-        <div class="modal-slide">
-          <div class="modal-slide__form-wrap">
-            <span class="modal-slide__close-btn"></span>
-            <h2 class="modal-slide__form-title">Отправить заявку</h2>
-            <form
-              action="php/send.php"
-              method="post"
-              accept-charset="utf-8"
-              enctype="multipart/form-data"
-              class="promo__form-main"
-            >
-              <input class="modal-slide__form-input input-item" name="name" required placeholder="Имя" />
-              <input
-                class="modal-slide__form-input input-item phone-mask"
-                name="phone"
-                type="tel"
-                required
-                placeholder="Телефон"
-              />
-              <input
-                class="modal-slide__form-input input-item"
-                name="email"
-                type="email"
-                required
-                placeholder="Электронная почта"
-              />
-              <div class="modal-slide__form-btn">
-                <label for="input__file" class="input__file-button"
-                  ><span>Прикрепить файл</span> <span id="file-name-modal" class="modal-slide__file-name"></span>
-                  <input
-                    id="input__file-modal"
-                    name="myfile[]"
-                    type="file"
-                    class="promo__input-file"
-                    size="40"
-                    accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx"
-                    aria-invalid="false"
-                    multiple="multiple"
-                /></label>
-              </div>
-              <textarea
-                name="mess"
-                class="modal-slide__form-text input-item"
-                cols="30"
-                rows="12"
-                placeholder="Добавьте описание"
-              ></textarea>
-              <button type="submit" class="modal-slide__form-submit input-item">Отправить</button>
-            </form>
-          </div>
-        </div>
       </div>
       <section class="promo">
         <div class="container">
@@ -439,54 +388,57 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
           </p>
-          <div class="promo__form-wrap">
-            <h2 class="promo__form-title">Отправить заявку</h2>
-            <form
-              action="php/send.php"
-              method="post"
-              accept-charset="utf-8"
-              id="form-main"
-              enctype="multipart/form-data"
-              class="promo__form-main"
-            >
-              <input class="promo__form-input input-item" name="name" required placeholder="Имя" />
-              <input
-                class="promo__form-input input-item phone-mask"
-                name="phone"
-                type="tel"
-                required
-                placeholder="Телефон"
-              />
-              <input
-                class="promo__form-input input-item"
-                name="email"
-                type="email"
-                required
-                placeholder="Электронная почта"
-              />
-              <div class="promo__form-btn">
-                <label for="input__file" class="input__file-button"
-                  ><span>Прикрепить файл</span> <span id="file-name" class="input__file-name"></span>
-                  <input
-                    id="input__file"
-                    name="myfile[]"
-                    type="file"
-                    class="promo__input-file"
-                    size="40"
-                    accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx"
-                    aria-invalid="false"
-                    multiple="multiple"
-                /></label>
-              </div>
-              <textarea
-                name="mess"
-                class="promo__form-text input-item"
-                cols="30"
-                rows="12"
-                placeholder="Добавьте описание"
-              ></textarea>
-              <button type="submit" class="promo__form-submit input-item">Отправить</button>
-            </form>
+          <div class="promo__form">
+            <div class="promo__form-wrap">
+              <span class="close-btn"></span>
+              <h2 class="promo__form-title">Отправить заявку</h2>
+              <form
+                action="php/send.php"
+                method="post"
+                accept-charset="utf-8"
+                id="form-main"
+                enctype="multipart/form-data"
+                class="promo__form-main"
+              >
+                <input class="promo__form-input input-item" name="name" required placeholder="Имя" />
+                <input
+                  class="promo__form-input input-item phone-mask"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="Телефон"
+                />
+                <input
+                  class="promo__form-input input-item"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Электронная почта"
+                />
+                <div class="promo__form-btn">
+                  <label for="input__file" class="input__file-button"
+                    ><span>Прикрепить файл</span> <span id="file-name" class="input__file-name"></span>
+                    <input
+                      id="input__file"
+                      name="myfile[]"
+                      type="file"
+                      class="promo__input-file"
+                      size="40"
+                      accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx"
+                      aria-invalid="false"
+                      multiple="multiple"
+                  /></label>
+                </div>
+                <textarea
+                  name="mess"
+                  class="promo__form-text input-item"
+                  cols="30"
+                  rows="12"
+                  placeholder="Добавьте описание"
+                ></textarea>
+                <button type="submit" class="promo__form-submit input-item">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="promo__slider">
@@ -636,7 +588,7 @@
       <div class="modal">
         <div class="modal__bg"></div>
         <div class="modal__wrap">
-          <span class="modal__close-btn"></span>
+          <span class="close-btn"></span>
           <h2 class="modal__title">Отправить заявку</h2>
           <form
             action="php/send.php"

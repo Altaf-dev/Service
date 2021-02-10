@@ -11,16 +11,16 @@ document.querySelector('.advantage__button').onclick = function () {
     document.querySelector('.modal').classList.toggle('modal-active');
 };
 
-document.querySelector('.modal__close-btn').onclick = function () {
+document.querySelector('.close-btn').onclick = function () {
     document.querySelector('.modal').classList.remove('modal-active');
 };
 
 document.querySelector('.slider__btn').onclick = function () {
-    document.querySelector('.modal-slide').classList.toggle('active');
+    document.querySelector('.promo__form').classList.toggle('active');
 };
 
-document.querySelector('.modal-slide__close-btn').onclick = function () {
-    document.querySelector('.modal-slide').classList.remove('active');
+document.querySelector('.close-btn').onclick = function () {
+    document.querySelector('.promo__form').classList.remove('active');
 };
 
 $(document).ready((function () {
@@ -33,6 +33,7 @@ $(document).ready(function () {
         $("#file-name").html('(Файл прикреплен)');
     });
 });
+
 
 $(document).ready(function () {
     $('.slider__block').slick({
