@@ -22,6 +22,8 @@ else
     $typeOfRequest = 'Заявка с сайта';
 
 
+
+
 // Формирование самого письма
 $title = "Письмо с Сайта";
 $body = "
@@ -29,8 +31,11 @@ $body = "
 <h2>Тип запроса:$typeOfRequest</h2>
 <b>Имя:</b> $name<br><br>
 <b>Почта:</b> $email<br><br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br> $text";
+<b>Телефон:</b> $phone<br><br>";
+if (strlen ($text) > 0 ){
+    $body .= "<b>Сообщение:</b><br>".$text;
+}
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -47,10 +52,10 @@ try {
         $mail->Password   = 'hasik92.92'; // Пароль на почте
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
-        $mail->setFrom('coupe.86@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+        $mail->setFrom('smt.service@bk.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
         // Получатель письма
-        $mail->addAddress('smt.service@bk.ru');
+    $mail->addAddress('smt.service@bk.ru');
         $mail->addAddress('coupe.86@mail.ru');
 
     // Прикрипление файлов к письму

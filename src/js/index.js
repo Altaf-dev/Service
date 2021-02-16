@@ -1,4 +1,3 @@
-const MODAL_SLIDE = document.querySelector(".slider__btn")
 const FORM = document.querySelector(".promo__form")
 const MENU_BTN = document.querySelector(".header__btn")
 const MENU = document.querySelector(".header__nav")
@@ -11,7 +10,7 @@ function closeMenu() {
 }
 
 function openForm() {
-    FORM.classList.toggle('active')
+    FORM.classList.add('active')
 }
 
 function closeForm() {
@@ -30,19 +29,19 @@ MENU_BTN.onclick = function () {
     openMenu()
 }
 
-MODAL_SLIDE.onclick = function () {
-    openForm()
-}
-
-MODAL_SLIDE.onclick = function () {
-    openForm()
-}
-
 window.addEventListener('click', (event) => {
     let element = event.target
 
     if (element.classList.contains('open-modal')) {
         openModal()
+    }
+})
+
+window.addEventListener('click', (event) => {
+    let element = event.target
+
+    if (element.classList.contains('slider__btn')) {
+        openForm()
     }
 })
 

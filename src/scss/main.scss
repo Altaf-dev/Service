@@ -1,23 +1,26 @@
 @import "color.scss";
 
 
-.bg {
-  position: absolute;
-  top: 0;
-  z-index: -20;
-  width: 100%;
-  height: 100vh;
-  filter: brightness(50%);
-
-  &__video {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .main {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 240px);
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(50%);
+    @media screen and (max-width: 767px) {
+      height: calc(100vh - 70px);
+    }
+  }
+
 
   &__headline {
     display: flex;
@@ -29,7 +32,7 @@
     }
 
     @media screen and (max-width: 425px) {
-      padding: 15vh 0;
+      padding: 10vh 0;
     }
   }
 
@@ -402,11 +405,36 @@
     box-shadow: inset 0 0 8px rgba(0, 185, 253, 0.5);
     transition: .3s;
 
+
     @media screen and (max-width: 425px) {
       width: 220px;
       height: 400px;
     }
   }
+
+  .action {
+    .slider__item-wrap {
+      &:before {
+        content: '';
+        position: absolute;
+        background-image: url("../img/offer.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 5px;
+        left: 5px;
+        width: 52px;
+        height: 52px;
+        z-index: 15;
+        @media screen and (max-width: 425px) {
+          bottom: 15px;
+          left: 2px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
 
   &__item-wrap {
     position: relative;
@@ -414,6 +442,7 @@
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+
   }
 
   .slick-center {
@@ -442,6 +471,7 @@
     font-size: 1.4rem;
     text-align: center;
     align-items: center;
+    justify-content: center;
     height: 60px;
   }
 
@@ -455,6 +485,7 @@
     object-fit: cover;
   }
 
+
   &__btn {
     position: absolute;
     left: 0;
@@ -467,6 +498,7 @@
     height: 60px;
     transition: .3s;
   }
+
 }
 
 .promo {
@@ -509,22 +541,20 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      max-width: 720px;
+      height: 500px;
       border-radius: 30px;
-      border: 2px solid #59c7c8;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-      @media screen and (max-width: 767px) {
+      border: 2px solid $border-color;
+      margin: 0 auto;
+      padding: 40px 60px;
+      @media screen and (max-width: 1199px) {
         width: 100%;
-        max-width: 320px;
-        padding: 20px;
+        height: 600px;
       }
 
-      .promo__form-main {
-        @media screen and (max-width: 1199px) {
-          flex-wrap: nowrap;
-          flex-direction: column;
-          justify-content: normal;
-        }
+      @media screen and (max-width: 767px) {
+        width: 90%;
+        padding: 15px 20px;
       }
 
       .close-btn {
@@ -532,14 +562,15 @@
         right: 30px;
         top: 30px;
         @media screen and (max-width: 1199px) {
-          right: 20px;
-          top: 20px;
+          right: 15px;
+          top: 15px;
         }
       }
-      .input-item {
-        @media screen and (max-width: 767px) {
-          margin: 10px 0;
-        }
+    }
+
+    .promo__form-title {
+      @media screen and (max-width: 375px) {
+        font-size: 2.4rem;
       }
     }
   }
